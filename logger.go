@@ -22,7 +22,7 @@ var timeFormat = "02/Jan/2006:15:04:05 -0700"
 func Logger(log *logrus.Logger) gin.HandlerFunc {
 	hostname, err := os.Hostname()
 	if err != nil {
-		hostname = "unknow"
+		hostname = "unknown"
 	}
 	return func(c *gin.Context) {
 		// other handler can change c.Path so:
